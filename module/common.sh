@@ -2,6 +2,7 @@ MODDIR=${MODDIR:-${0%/*}}
 CONFIG="$MODDIR/config"
 PROP_NAME="persist.adb.notify"
 ADB_NOTIFICATION_KEY="-1|android|26|null|1000"
+USB_CONNECTION_NOTIFICATION_KEY="-1|android|32|null|1000"
 SNOOZE_MS="315360000000"
 
 normalize_value() {
@@ -44,8 +45,10 @@ apply_notify() {
 
   if [ "$value" = "0" ]; then
     cmd notification snooze --for "$SNOOZE_MS" "$ADB_NOTIFICATION_KEY" >/dev/null 2>&1 || true
+    cmd notification snooze --for "$SNOOZE_MS" "$USB_CONNECTION_NOTIFICATION_KEY" >/dev/null 2>&1 || true
   else
     cmd notification unsnooze "$ADB_NOTIFICATION_KEY" >/dev/null 2>&1 || true
+    cmd notification unsnooze "$USB_CONNECTION_NOTIFICATION_KEY" >/dev/null 2>&1 || true
   fi
 }
 
@@ -62,4 +65,6 @@ print_status() {
   echo "mode=$mode"
   echo "config notify=$configured"
   echo "$PROP_NAME=$current"
+  echo "adb_notification_key=$ADB_NOTIFICATION_KEY"
+  echo "usb_connection_notification_key=$USB_CONNECTION_NOTIFICATION_KEY"
 }

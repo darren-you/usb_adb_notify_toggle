@@ -1,7 +1,7 @@
 #!/system/bin/sh
 
-ui_print "- USB ADB Notify Toggle"
-ui_print "- Default mode: hide USB debugging persistent notification"
+ui_print "- USB Notify Toggle"
+ui_print "- Default mode: hide USB debugging and USB charging notifications"
 
 if [ ! -f "$MODPATH/config" ]; then
   echo "notify=0" > "$MODPATH/config"

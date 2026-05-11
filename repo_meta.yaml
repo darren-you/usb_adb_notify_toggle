@@ -18,13 +18,15 @@ doc_status:
   agent_context: present
 github:
   repo: darren-you/adb_notify
-  about: Magisk 模块，用于切换 Android USB 调试常驻通知
+  about: Magisk 模块，用于切换 Android USB 调试与 USB 充电/连接通知
   topics:
     - darren-space
     - tooling-repo
     - android-app
     - magisk-module
+    - usb-notification
     - usb-debugging
+    - usb-charging
 entrypoints:
   - README.md
   - AGENTS.md
