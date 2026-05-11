@@ -7,10 +7,10 @@ governance_tier: standard
 domains:
   - android_app
 delivery_surfaces:
-  - magisk_module
+  - android_app
 depends_on: []
 default_workflows:
-  - build_magisk_module
+  - release_android_app
 doc_status:
   architecture: present
   api: not_applicable
