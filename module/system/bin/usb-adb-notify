@@ -1,0 +1,46 @@
+#!/system/bin/sh
+
+MODDIR="/data/adb/modules/usb_adb_notify_toggle"
+
+if [ ! -f "$MODDIR/common.sh" ]; then
+  echo "usb_adb_notify_toggle module is not installed or not enabled."
+  exit 1
+fi
+
+. "$MODDIR/common.sh"
+
+case "$1" in
+  off|hide|disable|0)
+    write_notify 0
+    apply_notify 0
+    echo "USB debugging persistent notification: hidden"
+    ;;
+  on|show|enable|1)
+    write_notify 1
+    apply_notify 1
+    echo "USB debugging persistent notification: shown"
+    echo "Reconnect USB or reboot if the notification does not reappear immediately."
+    ;;
+  toggle)
+    if [ "$(read_notify)" = "0" ]; then
+      write_notify 1
+      apply_notify 1
+      echo "USB debugging persistent notification: shown"
+      echo "Reconnect USB or reboot if the notification does not reappear immediately."
+    else
+      write_notify 0
+      apply_notify 0
+      echo "USB debugging persistent notification: hidden"
+    fi
+    ;;
+  status|"")
+    print_status
+    exit 0
+    ;;
+  *)
+    echo "Usage: su -c usb-adb-notify [on|off|toggle|status]"
+    exit 2
+    ;;
+esac
+
+print_status
