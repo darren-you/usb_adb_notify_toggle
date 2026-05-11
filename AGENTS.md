@@ -15,7 +15,7 @@
 
 ## Repository Scope
 
-- 本仓库维护 USB ADB 调试通知开关 Magisk 模块。
+- 本仓库维护 ADB 调试通知开关 Magisk 模块。
 - 模块只处理“已连接到 USB 调试”通知，不处理 USB 充电通知。
 - 生成的安装 zip 属于构建产物，默认不提交；正式可安装包通过 GitHub Release 发布。
 

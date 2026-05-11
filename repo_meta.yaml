@@ -1,5 +1,5 @@
 schema_version: 3
-name: usb_adb_notify_toggle_magisk
+name: adb_notify
 archetype: tooling_repo
 lifecycle: active
 owner: darren-you
@@ -17,7 +17,7 @@ doc_status:
   release: present
   agent_context: present
 github:
-  repo: darren-you/usb_adb_notify_toggle
+  repo: darren-you/adb_notify
   about: Magisk 模块，用于切换 Android USB 调试常驻通知
   topics:
     - darren-space
@@ -30,4 +30,4 @@ entrypoints:
   - AGENTS.md
   - module
   - scripts/build.sh
-  - harness/docs/workspace/repositories/usb_adb_notify_toggle_magisk/agent_context.md
+  - harness/docs/workspace/repositories/adb_notify/agent_context.md

@@ -1,3 +1,3 @@
-修正工作区元数据枚举
+精简仓库命名
 
-将 Magisk 模块仓库按工作区已支持的 Android 交付面与发布 workflow 登记。
+将仓库登记名与 GitHub 远端改为 adb_notify。

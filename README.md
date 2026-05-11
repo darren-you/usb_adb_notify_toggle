@@ -1,4 +1,4 @@
-# USB ADB Notify Toggle Magisk 模块
+# ADB Notify Magisk 模块
 
 这个 Magisk 模块用于切换 Android 的 USB 调试常驻通知，核心方式是写入 `persist.adb.notify`。
 
