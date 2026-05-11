@@ -1,0 +1,33 @@
+schema_version: 3
+name: usb_adb_notify_toggle_magisk
+archetype: tooling_repo
+lifecycle: active
+owner: darren-you
+governance_tier: standard
+domains:
+  - android_app
+delivery_surfaces:
+  - magisk_module
+depends_on: []
+default_workflows:
+  - build_magisk_module
+doc_status:
+  architecture: present
+  api: not_applicable
+  release: present
+  agent_context: present
+github:
+  repo: darren-you/usb_adb_notify_toggle
+  about: Magisk 模块，用于切换 Android USB 调试常驻通知
+  topics:
+    - darren-space
+    - tooling-repo
+    - android-app
+    - magisk-module
+    - usb-debugging
+entrypoints:
+  - README.md
+  - AGENTS.md
+  - module
+  - scripts/build.sh
+  - harness/docs/workspace/repositories/usb_adb_notify_toggle_magisk/agent_context.md

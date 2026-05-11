@@ -1,0 +1,3 @@
+补齐工作区治理契约
+
+为 USB ADB Notify Toggle Magisk 模块增加 AGENTS、repo_meta 和提交信息记录，准备接入 darren_space 子模块管理。

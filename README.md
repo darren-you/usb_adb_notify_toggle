@@ -64,6 +64,14 @@ scripts/
   build.sh
 ```
 
+## 工作区治理
+
+本仓库纳入 `darren_space` 后按轻量 tooling repo 管理：
+
+- 工作区标准入口：`../harness/docs/workspace/standards/README.md`
+- 终端脚本输出标准：`../harness/docs/workspace/standards/tooling/terminal_output_golden_path.md`
+- Android closest-fit 标准：`../harness/docs/workspace/standards/android_app/android_app_golden_path.md`
+
 ## 参考资料
 
 - AOSP `UsbDeviceManager`：<https://android.googlesource.com/platform/frameworks/base/+/5ac72a2/services/java/com/android/server/usb/UsbDeviceManager.java>
